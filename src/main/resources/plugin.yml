@@ -1,0 +1,5 @@
+name: Me.buryings.lightningsticks
+version: ${project.version}
+main: lightningsticks.me.buryings.lightningsticks.Me.buryings.lightningsticks
+authors: [ Buryings ]
+description: Lightningsticks
