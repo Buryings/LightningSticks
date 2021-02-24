@@ -8,12 +8,14 @@ public final class lightningSticks extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        super.onEnable();
         log("Starting plugin");
         registerCommands();
     }
 
     @Override
     public void onDisable() {
+        super.onDisable();
         getServer().getConsoleSender().sendMessage("LightningSticks disabled");
         log("Stopping plugin");
     }
