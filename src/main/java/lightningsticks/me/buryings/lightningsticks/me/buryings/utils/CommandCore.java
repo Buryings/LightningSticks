@@ -1,16 +1,20 @@
 package lightningsticks.me.buryings.lightningsticks.me.buryings.utils;
 
+import de.myzelyam.api.vanish.VanishAPI;
+import lightningsticks.me.buryings.lightningsticks.me.buryings.annotations.ConsoleOnly;
 import lightningsticks.me.buryings.lightningsticks.me.buryings.annotations.Disabled;
 import lightningsticks.me.buryings.lightningsticks.me.buryings.annotations.Permission;
+import lightningsticks.me.buryings.lightningsticks.me.buryings.annotations.PlayerOnly;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import sun.misc.resources.Messages;
+import static lightningsticks.me.buryings.lightningsticks.me.buryings.utils.CoreUtils.log;
 
-public abstract class CoreCommand implements CommandExecutor {
-    public CoreCommand(String name) {
+
+public abstract class CommandCore implements CommandExecutor {
+    public CommandCore(String name) {
         Bukkit.getPluginCommand(name).setExecutor(this);
     }
 
@@ -20,7 +24,7 @@ public abstract class CoreCommand implements CommandExecutor {
           @Disabled - Disables the command
          */
         if (this.getClass().isAnnotationPresent(Disabled.class)) {
-            new MSG(Messages.COMMAND_DISABLED).send(sender);
+            new MSG("&cCommand is disabled").send(sender);
             return true;
         }
 //        /*
@@ -36,7 +40,7 @@ public abstract class CoreCommand implements CommandExecutor {
          */
         if (this.getClass().isAnnotationPresent(ConsoleOnly.class) && sender instanceof Player ||
                 this.getClass().isAnnotationPresent(PlayerOnly.class) && !(sender instanceof Player)) {
-            new MSG(Messages.CANNOT_USE_THIS).send(sender);
+            new MSG("&cYou cannot use this").send(sender);
             return true;
         }
         /*
@@ -45,7 +49,7 @@ public abstract class CoreCommand implements CommandExecutor {
         if (this.getClass().isAnnotationPresent(Permission.class)) {
             String perm = this.getClass().getAnnotation(Permission.class).value();
             if (!sender.hasPermission(perm) || !sender.hasPermission("core.command.*")) {
-                new MSG(Messages.NO_PERMISSION).send(sender);
+                new MSG("&cNo perms").send(sender);
                 // Logs to console when a player does not have the permission (might make this toggleable in the config later)
                 log("&4" + sender.getName() + " &4does not have the permission &c" + perm);
                 return true;
@@ -59,7 +63,7 @@ public abstract class CoreCommand implements CommandExecutor {
     }
 
     /**
-     * @param s - String-name of the player we are trying to sfind
+     * @param s - String-name of the player we are trying to find
      * @return - Returns whether or not the player has been found
      */
     public boolean findPlayer(String s) {

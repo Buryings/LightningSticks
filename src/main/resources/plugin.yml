@@ -1,5 +1,8 @@
-name: Me.buryings.lightningsticks
+name: Lightning Sticks
 version: ${project.version}
-main: lightningsticks.me.buryings.lightningsticks.Me.buryings.lightningsticks
+main: lightningsticks.me.buryings.lightningsticks.me.buryings.lightningSticks
 authors: [ Buryings ]
 description: Lightningsticks
+commands:
+  lsgive:
+    description: Gives people lightning sticks

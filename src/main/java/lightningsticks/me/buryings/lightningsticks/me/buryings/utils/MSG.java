@@ -1,5 +1,6 @@
 package lightningsticks.me.buryings.lightningsticks.me.buryings.utils;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 
@@ -60,5 +61,15 @@ public class MSG {
             return;
         }
         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', this.message));
+    }
+
+    public void broadcast() {
+        if (this.message == null) {
+            for (String msg : messageList) {
+                Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', msg));
+            }
+            return;
+        }
+        Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', this.message));
     }
 }
