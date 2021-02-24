@@ -1,4 +1,4 @@
-package lightningsticks.me.buryings.lightningsticks.Me.buryings.utils;
+package lightningsticks.me.buryings.lightningsticks.me.buryings.utils;
 
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;

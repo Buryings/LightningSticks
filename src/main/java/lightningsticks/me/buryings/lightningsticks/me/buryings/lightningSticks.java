@@ -1,4 +1,4 @@
-package lightningsticks.me.buryings.lightningsticks.Me.buryings;
+package lightningsticks.me.buryings.lightningsticks.me.buryings;
 
 import lightningsticks.me.buryings.lightningsticks.me.buryings.commands.commandLightningsticks;
 import org.bukkit.plugin.java.JavaPlugin;

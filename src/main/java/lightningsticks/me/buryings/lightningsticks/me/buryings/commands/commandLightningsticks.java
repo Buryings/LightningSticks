@@ -1,9 +1,9 @@
-package lightningsticks.me.buryings.lightningsticks.Me.buryings.commands;
+package lightningsticks.me.buryings.lightningsticks.me.buryings.commands;
 
-import lightningsticks.me.buryings.lightningsticks.Me.buryings.annotations.Permission;
-import lightningsticks.me.buryings.lightningsticks.Me.buryings.annotations.PlayerOnly;
-import lightningsticks.me.buryings.lightningsticks.Me.buryings.utils.itemBuilder;
-import lightningsticks.me.buryings.lightningsticks.Me.buryings.utils.MSG;
+import lightningsticks.me.buryings.lightningsticks.me.buryings.annotations.Permission;
+import lightningsticks.me.buryings.lightningsticks.me.buryings.annotations.PlayerOnly;
+import lightningsticks.me.buryings.lightningsticks.me.buryings.utils.itemBuilder;
+import lightningsticks.me.buryings.lightningsticks.me.buryings.utils.MSG;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

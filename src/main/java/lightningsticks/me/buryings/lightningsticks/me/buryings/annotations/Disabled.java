@@ -1,4 +1,4 @@
-package lightningsticks.me.buryings.lightningsticks.Me.buryings.annotations;
+package lightningsticks.me.buryings.lightningsticks.me.buryings.annotations;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

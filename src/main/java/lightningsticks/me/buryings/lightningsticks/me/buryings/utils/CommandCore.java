@@ -1,7 +1,7 @@
-package lightningsticks.me.buryings.lightningsticks.Me.buryings.utils;
+package lightningsticks.me.buryings.lightningsticks.me.buryings.utils;
 
-import lightningsticks.me.buryings.lightningsticks.Me.buryings.annotations.Disabled;
-import lightningsticks.me.buryings.lightningsticks.Me.buryings.annotations.Permission;
+import lightningsticks.me.buryings.lightningsticks.me.buryings.annotations.Disabled;
+import lightningsticks.me.buryings.lightningsticks.me.buryings.annotations.Permission;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
