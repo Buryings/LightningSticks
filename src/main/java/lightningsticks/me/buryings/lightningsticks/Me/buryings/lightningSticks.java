@@ -1,9 +1,9 @@
 package lightningsticks.me.buryings.lightningsticks.Me.buryings;
 
-import lightningsticks.me.buryings.lightningsticks.Me.buryings.commands.CommandLightningsticks;
+import lightningsticks.me.buryings.lightningsticks.me.buryings.commands.commandLightningsticks;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class Lightningsticks extends JavaPlugin {
+public final class lightningSticks extends JavaPlugin {
 
     @Override
     public void onEnable() {
@@ -17,6 +17,7 @@ public final class Lightningsticks extends JavaPlugin {
     }
 
     private void registerCommands() {
-        new CommandLightningsticks();
+
+        new commandLightningsticks();
     }
 }

@@ -1,6 +1,7 @@
-package lightningsticks.me.buryings.lightningsticks.Me.buryings.commands;
+package lightningsticks.me.buryings.lightningsticks.Me.buryings.utils;
 
-import lightningsticks.me.buryings.lightningsticks.Me.buryings.utils.MSG;
+import lightningsticks.me.buryings.lightningsticks.Me.buryings.annotations.Disabled;
+import lightningsticks.me.buryings.lightningsticks.Me.buryings.annotations.Permission;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -58,7 +59,7 @@ public abstract class CoreCommand implements CommandExecutor {
     }
 
     /**
-     * @param s - String-name of the player we are trying to find
+     * @param s - String-name of the player we are trying to sfind
      * @return - Returns whether or not the player has been found
      */
     public boolean findPlayer(String s) {

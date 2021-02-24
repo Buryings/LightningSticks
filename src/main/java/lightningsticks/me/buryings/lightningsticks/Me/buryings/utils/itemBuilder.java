@@ -10,89 +10,89 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class ItemBuilder {
+public class itemBuilder {
 
     ItemStack itemStack;
     ItemMeta itemMeta;
     SkullMeta skullMeta;
 
     //Constructor
-    public ItemBuilder(Material material) {
+    public itemBuilder(Material material) {
         this.itemStack = new ItemStack(material);
         this.itemMeta = this.itemStack.getItemMeta();
     }
 
-    public ItemBuilder(ItemStack itemStack) {
+    public itemBuilder(ItemStack itemStack) {
         this.itemStack = itemStack;
         this.itemMeta = this.itemStack.getItemMeta();
     }
 
     //Basics
-    public ItemBuilder setMaterial(Material material) {
+    public itemBuilder setMaterial(Material material) {
         itemStack.setType(material);
         return this;
     }
     @SuppressWarnings("deprecation")
-    public ItemBuilder setSubid(byte subid) {
+    public itemBuilder setSubid(byte subid) {
         itemStack.getData().setData(subid);
         return this;
     }
-    public ItemBuilder setAmount(int amount) {
+    public itemBuilder setAmount(int amount) {
         itemStack.setAmount(amount);
         return this;
     }
-    public ItemBuilder setname(String name) {
+    public itemBuilder setname(String name) {
         this.itemMeta.setDisplayName(name);
         return this;
     }
-    public ItemBuilder setDurability(short durability) {
+    public itemBuilder setDurability(short durability) {
         itemStack.setDurability(durability);
         return this;
     }
 
     //ENCHANTMENTS
 
-    public ItemBuilder setEnchantments(Map<Enchantment, Integer> enchantments) {
+    public itemBuilder setEnchantments(Map<Enchantment, Integer> enchantments) {
         enchantments.forEach((enchantment, level) -> this.itemStack.addEnchantment(enchantment, level));
         return this;
     }
-    public ItemBuilder addEnchantments(Enchantment enchantment, Integer level) {
+    public itemBuilder addEnchantments(Enchantment enchantment, Integer level) {
         this.itemStack.addEnchantment(enchantment, level);
         return this;
     }
-    public ItemBuilder clearEnchantments() {
+    public itemBuilder clearEnchantments() {
         this.itemStack.getEnchantments().keySet().forEach(enchantment -> this.itemStack.removeEnchantment(enchantment));
         return this;
     }
-    public ItemBuilder removeEnchantments(Enchantment enchantment) {
+    public itemBuilder removeEnchantments(Enchantment enchantment) {
         this.itemStack.removeEnchantment(enchantment);
         return this;
     }
 
     //LORES
 
-    public ItemBuilder setLore(List<String> lore) {
+    public itemBuilder setLore(List<String> lore) {
         itemMeta.setLore(lore);
         return this;
     }
-    public ItemBuilder addLore(String lore) {
+    public itemBuilder addLore(String lore) {
         List<String> loreList = itemMeta.getLore();
         loreList.add(lore);
         itemMeta.setLore(loreList);
         return this;
     }
 
-    public ItemBuilder clearLore() {
+    public itemBuilder clearLore() {
         itemMeta.setLore(new ArrayList<>());
         return this;
     }
-    public ItemBuilder removeLore(String lore) {
+    public itemBuilder removeLore(String lore) {
         itemMeta.getLore().remove(lore);
         return this;
     }
 
     //SKULL
-    public ItemBuilder setSkullOwner(String owner) {
+    public itemBuilder setSkullOwner(String owner) {
         itemStack.setItemMeta(itemMeta);
         skullMeta = (SkullMeta) itemStack.getItemMeta();
         skullMeta.setOwner(owner);

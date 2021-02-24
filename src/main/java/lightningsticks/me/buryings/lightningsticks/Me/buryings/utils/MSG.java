@@ -2,7 +2,6 @@ package lightningsticks.me.buryings.lightningsticks.Me.buryings.utils;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -19,10 +18,6 @@ public class MSG {
 
     public MSG(List<String> s) {
         this.messageList = s;
-    }
-
-    public MSG(CommandSender p, String s) {
-        p.sendMessage(ChatColor.translateAlternateColorCodes('&', s));
     }
 
 
