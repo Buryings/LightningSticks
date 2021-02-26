@@ -49,6 +49,8 @@ public class lsgive extends CommandCore {
                     return;
                 }
             }
+            new MSG("&cIncorrect usage! Use: /lsgive <player|all>").send(player);
+            return;
         }
         new MSG("&cIncorrect usage! Use: /lsgive <player|all>").send(player);
     }
