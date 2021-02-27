@@ -21,40 +21,46 @@ public class lsgive extends CommandCore {
 
     @Override
     public void execute(CommandSender sender, String label, String[] args) {
-        Player player = (Player) sender;
         // /lsgive <player|all>
-        if(args.length > 1){
+        Player player = (Player) sender;
+        // Checks if the amount of args does not equal 1. If it doesnt, it will send a usage error.
+        if(args.length != 1){
             new MSG("&cIncorrect usage! Use: /lsgive <player|all>").send(player);
         }
+        // Checks if the arg length == 1
         if(args.length == 1){
             if(!args[0].equalsIgnoreCase("all")) {
                 String target = args[0];
+                // Checks if the user is not online.
                 if (!findPlayer(target)) {
                     new MSG("&cCannot find &e%target%").replace("%target%", target.toUpperCase()).send(player);
                     return;
                 }
                 Player t = Bukkit.getPlayer(target);
-                t.getInventory().addItem(new itemBuilder(Material.STICK).setname(ChatColor.YELLOW + "Lightning Stick").build());
-                t.updateInventory();
+                // Gives the user the stick and sends a message to the command sender
+                giveStick(t);
                 new MSG("&aYou have given &e%target% &aa lightning stick").replace("%target%", t.getName().toUpperCase()).send(player);
-                new MSG("&aYou were given a lightning stick").send(Bukkit.getPlayer(target));
                 return;
             }
             if(args[0].equalsIgnoreCase("all")){
                 for(Player online : Bukkit.getOnlinePlayers()){
-                    online.getInventory().addItem(new itemBuilder(Material.STICK).setname(ChatColor.YELLOW + "Lightning Stick").build());
-                    online.updateInventory();
+                    // Sends a stick to all people online and sends a message to the command sender
+                    giveStick(online);
                     new MSG("&aYou have given &eeveryone &aa lightning stick").send(player);
-                    new MSG("&aYou were given a lightning stick").send(online);
                     return;
                 }
             }
+            // If the first arg != all or a player
             new MSG("&cIncorrect usage! Use: /lsgive <player|all>").send(player);
-            return;
         }
-        new MSG("&cIncorrect usage! Use: /lsgive <player|all>").send(player);
+    }
+    private void giveStick(Player p){
+        p.getInventory().addItem(new itemBuilder(Material.STICK).setname(ChatColor.YELLOW + "Lightning Stick").build());
+        p.updateInventory();
+        new MSG("&aYou were given a lightning stick").send(Bukkit.getPlayer(String.valueOf(p)));
     }
 }
+
 //    @Override
 //    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 //

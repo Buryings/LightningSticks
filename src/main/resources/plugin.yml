@@ -6,3 +6,7 @@ description: Lightningsticks
 commands:
   lsgive:
     description: Gives people lightning sticks
+    aliases:
+      - lightningstickgive
+      - givels
+      - lsg
