@@ -1,6 +1,6 @@
 name: LightningSticks
 version: ${project.version}
-main: lightningsticks.me.buryings.lightningSticks
+main: lightningsticks.me.buryings.LightningSticks
 authors: [ "Buryings", "hypews" ]
 description: A lightning sticks plugin
 commands:

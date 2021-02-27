@@ -4,7 +4,7 @@ import lightningsticks.me.buryings.commands.lsgive;
 import lightningsticks.me.buryings.utils.CoreUtils;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class LightningSticky extends JavaPlugin {
+public final class LightningSticks extends JavaPlugin {
 
     @Override
     public void onEnable() {
