@@ -49,7 +49,7 @@ public abstract class CommandCore implements CommandExecutor {
         if (this.getClass().isAnnotationPresent(Permission.class)) {
             String perm = this.getClass().getAnnotation(Permission.class).value();
             if (!sender.hasPermission(perm) || !sender.hasPermission("lightningsticks.*")) {
-                new MSG(Messages.NO_PERMS).send(sender);
+                new MSG(Messages.NO_PERMS).replace("%perm%", perm).send(sender);
                 // Logs to console when a player does not have the permission (might make this toggleable in the config later)
                 CoreUtils.log("&4" + sender.getName() + " &4does not have the permission &c" + perm);
                 return true;
