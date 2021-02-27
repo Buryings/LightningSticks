@@ -1,6 +1,7 @@
 package lightningsticks.me.buryings.lightningsticks.me.buryings.utils;
 
 import de.myzelyam.api.vanish.VanishAPI;
+import lightningsticks.me.buryings.lightningsticks.me.buryings.Messages;
 import lightningsticks.me.buryings.lightningsticks.me.buryings.annotations.ConsoleOnly;
 import lightningsticks.me.buryings.lightningsticks.me.buryings.annotations.Disabled;
 import lightningsticks.me.buryings.lightningsticks.me.buryings.annotations.Permission;
@@ -48,8 +49,8 @@ public abstract class CommandCore implements CommandExecutor {
          */
         if (this.getClass().isAnnotationPresent(Permission.class)) {
             String perm = this.getClass().getAnnotation(Permission.class).value();
-            if (!sender.hasPermission(perm) || !sender.hasPermission("core.command.*")) {
-                new MSG("&cNo perms").send(sender);
+            if (!sender.hasPermission(perm) || !sender.hasPermission("lightningsticks.*")) {
+                new MSG(Messages.NO_PERMS).send(sender);
                 // Logs to console when a player does not have the permission (might make this toggleable in the config later)
                 log("&4" + sender.getName() + " &4does not have the permission &c" + perm);
                 return true;

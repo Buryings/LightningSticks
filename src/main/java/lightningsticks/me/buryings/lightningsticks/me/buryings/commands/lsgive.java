@@ -1,5 +1,6 @@
 package lightningsticks.me.buryings.lightningsticks.me.buryings.commands;
 
+import lightningsticks.me.buryings.lightningsticks.me.buryings.Messages;
 import lightningsticks.me.buryings.lightningsticks.me.buryings.annotations.Permission;
 import lightningsticks.me.buryings.lightningsticks.me.buryings.annotations.PlayerOnly;
 import lightningsticks.me.buryings.lightningsticks.me.buryings.utils.CommandCore;
@@ -33,20 +34,20 @@ public class lsgive extends CommandCore {
                 String target = args[0];
                 // Checks if the user is not online.
                 if (!findPlayer(target)) {
-                    new MSG("&cCannot find &e%target%").replace("%target%", target.toUpperCase()).send(player);
+                    new MSG(Messages.INVALID_PLAYER).replace("%target%", target.toUpperCase()).send(player);
                     return;
                 }
                 Player t = Bukkit.getPlayer(target);
                 // Gives the user the stick and sends a message to the command sender
                 giveStick(t);
-                new MSG("&aYou have given &e%target% &aa lightning stick").replace("%target%", t.getName().toUpperCase()).send(player);
+                new MSG(Messages.LS_PLAYER).replace("%target%", t.getName().toUpperCase()).send(player);
                 return;
             }
             if(args[0].equalsIgnoreCase("all")){
                 for(Player online : Bukkit.getOnlinePlayers()){
                     // Sends a stick to all people online and sends a message to the command sender
                     giveStick(online);
-                    new MSG("&aYou have given &eeveryone &aa lightning stick").send(player);
+                    new MSG(Messages.LS_PLAYER_EVERYONE).send(player);
                     return;
                 }
             }
@@ -57,7 +58,7 @@ public class lsgive extends CommandCore {
     private void giveStick(Player p){
         p.getInventory().addItem(new itemBuilder(Material.STICK).setname(ChatColor.YELLOW + "Lightning Stick").build());
         p.updateInventory();
-        new MSG("&aYou were given a lightning stick").send(Bukkit.getPlayer(String.valueOf(p)));
+        new MSG(Messages.LS_TARGET).send(Bukkit.getPlayer(String.valueOf(p)));
     }
 }
 
