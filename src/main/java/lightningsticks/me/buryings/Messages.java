@@ -1,4 +1,4 @@
-package lightningsticks.me.buryings.lightningsticks.me.buryings;
+package lightningsticks.me.buryings;
 
 public class Messages {
 
