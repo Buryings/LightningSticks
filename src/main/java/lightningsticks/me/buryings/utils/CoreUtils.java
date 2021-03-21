@@ -1,6 +1,6 @@
-package lightningsticks.me.buryings.lightningsticks.me.buryings.utils;
+package lightningsticks.me.buryings.utils;
 
-import lightningsticks.me.buryings.lightningsticks.me.buryings.nms.ActionBar;
+import lightningsticks.me.buryings.nms.ActionBar;
 import org.bukkit.ChatColor;
 import org.bukkit.Effect;
 import org.bukkit.Location;

@@ -1,4 +1,4 @@
-package lightningsticks.me.buryings.lightningsticks.me.buryings.utils;
+package lightningsticks.me.buryings.utils;
 
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -32,19 +32,23 @@ public class itemBuilder {
         itemStack.setType(material);
         return this;
     }
+
     @SuppressWarnings("deprecation")
     public itemBuilder setSubid(byte subid) {
         itemStack.getData().setData(subid);
         return this;
     }
+
     public itemBuilder setAmount(int amount) {
         itemStack.setAmount(amount);
         return this;
     }
+
     public itemBuilder setname(String name) {
         this.itemMeta.setDisplayName(name);
         return this;
     }
+
     public itemBuilder setDurability(short durability) {
         itemStack.setDurability(durability);
         return this;
@@ -56,14 +60,17 @@ public class itemBuilder {
         enchantments.forEach((enchantment, level) -> this.itemStack.addEnchantment(enchantment, level));
         return this;
     }
+
     public itemBuilder addEnchantments(Enchantment enchantment, Integer level) {
         this.itemStack.addEnchantment(enchantment, level);
         return this;
     }
+
     public itemBuilder clearEnchantments() {
         this.itemStack.getEnchantments().keySet().forEach(enchantment -> this.itemStack.removeEnchantment(enchantment));
         return this;
     }
+
     public itemBuilder removeEnchantments(Enchantment enchantment) {
         this.itemStack.removeEnchantment(enchantment);
         return this;
@@ -75,6 +82,7 @@ public class itemBuilder {
         itemMeta.setLore(lore);
         return this;
     }
+
     public itemBuilder addLore(String lore) {
         List<String> loreList = itemMeta.getLore();
         loreList.add(lore);
@@ -86,6 +94,7 @@ public class itemBuilder {
         itemMeta.setLore(new ArrayList<>());
         return this;
     }
+
     public itemBuilder removeLore(String lore) {
         itemMeta.getLore().remove(lore);
         return this;

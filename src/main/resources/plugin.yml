@@ -1,8 +1,12 @@
-name: Lightning Sticks
+name: LightningSticks
 version: ${project.version}
-main: lightningsticks.me.buryings.lightningsticks.me.buryings.lightningSticks
-authors: [ Buryings ]
-description: Lightningsticks
+main: lightningsticks.me.buryings.LightningSticks
+authors: [ "Buryings", "hypews" ]
+description: A lightning sticks plugin
 commands:
   lsgive:
     description: Gives people lightning sticks
+    aliases:
+      - lightningstickgive
+      - givels
+      - lsg
