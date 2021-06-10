@@ -1,4 +1,4 @@
-package lightningsticks.me.buryings.utils;
+package me.buryings.lightningsticks.utils;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

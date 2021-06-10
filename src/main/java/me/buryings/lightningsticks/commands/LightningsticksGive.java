@@ -1,11 +1,11 @@
-package lightningsticks.me.buryings.commands;
+package me.buryings.lightningsticks.commands;
 
-import lightningsticks.me.buryings.Messages;
-import lightningsticks.me.buryings.annotations.Permission;
-import lightningsticks.me.buryings.annotations.PlayerOnly;
-import lightningsticks.me.buryings.utils.CommandCore;
-import lightningsticks.me.buryings.utils.MSG;
-import lightningsticks.me.buryings.utils.itemBuilder;
+import me.buryings.lightningsticks.Messages;
+import me.buryings.lightningsticks.annotations.Permission;
+import me.buryings.lightningsticks.annotations.PlayerOnly;
+import me.buryings.lightningsticks.utils.CommandCore;
+import me.buryings.lightningsticks.utils.MSG;
+import me.buryings.lightningsticks.utils.itemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -14,9 +14,9 @@ import org.bukkit.entity.Player;
 
 @Permission("lightningsticks.use")
 @PlayerOnly
-public class lsgive extends CommandCore {
+public class LightningsticksGive extends CommandCore {
 
-    public lsgive() {
+    public LightningsticksGive() {
         super("lsgive");
     }
 

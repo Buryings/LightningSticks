@@ -1,8 +1,10 @@
-package lightningsticks.me.buryings.annotations;
+package me.buryings.lightningsticks.annotations;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Disabled {
+public @interface Permission {
+    String value();
 }
+

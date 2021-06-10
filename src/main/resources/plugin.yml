@@ -1,7 +1,7 @@
 name: LightningSticks
 version: ${project.version}
-main: lightningsticks.me.buryings.LightningSticks
-authors: [ "Buryings", "hypews" ]
+main: me.buryings.lightningsticks.LightningSticks
+authors: [ "Buryings" ]
 description: A lightning sticks plugin
 commands:
   lsgive:
@@ -10,3 +10,9 @@ commands:
       - lightningstickgive
       - givels
       - lsg
+  lsremove:
+    description: Removes peoples lightning sticks
+    aliasses:
+      - lightningstickremove
+      - removels
+      - lsr

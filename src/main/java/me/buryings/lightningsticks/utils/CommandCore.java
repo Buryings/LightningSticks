@@ -1,11 +1,11 @@
-package lightningsticks.me.buryings.utils;
+package me.buryings.lightningsticks.utils;
 
 import de.myzelyam.api.vanish.VanishAPI;
-import lightningsticks.me.buryings.Messages;
-import lightningsticks.me.buryings.annotations.ConsoleOnly;
-import lightningsticks.me.buryings.annotations.Disabled;
-import lightningsticks.me.buryings.annotations.Permission;
-import lightningsticks.me.buryings.annotations.PlayerOnly;
+import me.buryings.lightningsticks.Messages;
+import me.buryings.lightningsticks.annotations.ConsoleOnly;
+import me.buryings.lightningsticks.annotations.Disabled;
+import me.buryings.lightningsticks.annotations.Permission;
+import me.buryings.lightningsticks.annotations.PlayerOnly;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -51,7 +51,7 @@ public abstract class CommandCore implements CommandExecutor {
             if (!sender.hasPermission(perm) || !sender.hasPermission("lightningsticks.*")) {
                 new MSG(Messages.NO_PERMS).replace("%perm%", perm).send(sender);
                 // Logs to console when a player does not have the permission (might make this toggleable in the config later)
-                CoreUtils.log("&4" + sender.getName() + " &4does not have the permission &c" + perm);
+                PluginUtils.log("&4" + sender.getName() + " &4does not have the permission &c" + perm);
                 return true;
             }
         }

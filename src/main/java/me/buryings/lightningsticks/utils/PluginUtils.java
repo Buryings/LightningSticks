@@ -1,6 +1,6 @@
-package lightningsticks.me.buryings.utils;
+package me.buryings.lightningsticks.utils;
 
-import lightningsticks.me.buryings.nms.ActionBar;
+import me.buryings.lightningsticks.nms.ActionBar;
 import org.bukkit.ChatColor;
 import org.bukkit.Effect;
 import org.bukkit.Location;
@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-public class CoreUtils {
+public class PluginUtils {
 
     public static void log(String s) {
         System.out.println(ChatColor.translateAlternateColorCodes('&', "[Lightning Sticks] " + s));

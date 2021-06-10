@@ -1,4 +1,4 @@
-package lightningsticks.me.buryings.nms;
+package me.buryings.lightningsticks.nms;
 
 import net.minecraft.server.v1_8_R3.IChatBaseComponent.ChatSerializer;
 import net.minecraft.server.v1_8_R3.PacketPlayOutChat;
