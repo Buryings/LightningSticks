@@ -1,31 +1,32 @@
 package me.buryings.lightningsticks;
 
-import me.buryings.lightningsticks.commands.lsgive;
+import me.buryings.lightningsticks.commands.LightningsticksGive;
+import me.buryings.lightningsticks.commands.LightningsticksRemove;
 import me.buryings.lightningsticks.events.StrikeLightningEvent;
+import me.buryings.lightningsticks.utils.PluginUtils;
 import org.bukkit.Bukkit;
-import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
-import static me.buryings.lightningsticks.utils.CoreUtils.log;
 
 public final class LightningSticks extends JavaPlugin {
 
     @Override
     public void onEnable() {
         super.onEnable();
-        log("Starting plugin");
+        PluginUtils.log("Loading commands");
         registerCommands();
         registerListeners();
+        PluginUtils.log("Lightning Sticks has started");
     }
 
     @Override
     public void onDisable() {
         super.onDisable();
-        getServer().getConsoleSender().sendMessage("LightningSticks disabled");
-        log("Stopping plugin");
+        PluginUtils.log("Lightning Sticks is shutting down");
     }
 
     private void registerCommands() {
-        new lsgive();
+        new LightningsticksGive();
+        new LightningsticksRemove();
     }
     private void registerListeners() {
 
