@@ -6,13 +6,12 @@ import me.buryings.lightningsticks.annotations.Permission;
 import me.buryings.lightningsticks.annotations.PlayerOnly;
 import me.buryings.lightningsticks.utils.CommandCore;
 import me.buryings.lightningsticks.utils.MSG;
-import me.buryings.lightningsticks.utils.itemBuilder;
+import me.buryings.lightningsticks.utils.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
 
 @Permission("lightningsticks.remove")
 @PlayerOnly
@@ -61,7 +60,7 @@ public class LightningsticksRemove extends CommandCore {
     }
 
     private void removeStick(Player player) {
-        player.getInventory().addItem(new itemBuilder(Material.STICK).setname(ChatColor.YELLOW + "Lightning Stick").build());
+        player.getInventory().addItem(new ItemBuilder(Material.STICK).setname(ChatColor.YELLOW + "Lightning Stick").build());
         player.updateInventory();
         new MSG(Messages.LS_REMOVED).send(player);
     }

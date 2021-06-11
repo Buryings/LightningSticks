@@ -5,7 +5,7 @@ import me.buryings.lightningsticks.annotations.Permission;
 import me.buryings.lightningsticks.annotations.PlayerOnly;
 import me.buryings.lightningsticks.utils.CommandCore;
 import me.buryings.lightningsticks.utils.MSG;
-import me.buryings.lightningsticks.utils.itemBuilder;
+import me.buryings.lightningsticks.utils.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -57,7 +57,7 @@ public class LightningsticksGive extends CommandCore {
     }
 
     private void giveStick(Player p) {
-        p.getInventory().addItem(new itemBuilder(Material.STICK).setname(ChatColor.YELLOW + "Lightning Stick").build());
+        p.getInventory().addItem(new ItemBuilder(Material.STICK).setname(ChatColor.YELLOW + "Lightning Stick").build());
         p.updateInventory();
         new MSG(Messages.LS_TARGET).send(p);
     }
