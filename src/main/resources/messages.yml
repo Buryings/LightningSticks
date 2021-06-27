@@ -1,0 +1,12 @@
+INVALID_PLAYER: "&cCould not find player &e%player%"
+USE_NUMBER: "&cYou must use a valid number!"
+
+GIVE_ARGUMENTS: "&c/lightningsticks give <player> <amount>"
+GIVE_SENDER: "&aYou have given &e%amount% Lightning Stick%s% &ato &6%player%&a!"
+GIVE_RECEIVER: "&6%player% has given you &e%amount% Lightning Stick%s%&a!"
+
+GIVEALL_ARGUMENTS: "&c/lightningsticks giveall <amount>"
+GIVEALL_SENDER: "&aYou have given &e%amount% Lightning Stick%s% &ato &6everyonea!"
+GIVEALL_RECEIVER: "&6%player% has given you &e%amount% Lightning Stick%s%&a!"
+
+RELOADED: "&aYou have reloaded the configuration files!!"
