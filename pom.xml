@@ -89,5 +89,12 @@
             <artifactId>SuperVanish</artifactId>
             <version>6.2.0</version>
         </dependency>
+        <!--BasePlugin / CodeBase -->
+        <dependency>
+            <groupId>com.github.NegativeKB</groupId>
+            <artifactId>BasePlugin</artifactId>
+            <version>1.5.5</version>
+        </dependency>
+
     </dependencies>
 </project>

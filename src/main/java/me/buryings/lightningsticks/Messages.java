@@ -1,13 +1,27 @@
 package me.buryings.lightningsticks;
 
+import dev.negativekb.baseplugin.util.ConfigUtils;
+import dev.negativekb.baseplugin.util.Message;
+import org.bukkit.configuration.file.FileConfiguration;
+
 public class Messages {
 
-    public static String INVALID_PLAYER = "&cCould not find player &e%target%";
-    public static String NO_PERMS = "&4You do not have the required permission &c%perm%";
+    private static final FileConfiguration config = new ConfigUtils("messages").getConfig();
 
-    public static String LS_PLAYER = "&aYou have given &e%target% &aa lightning stick";
-    public static String LS_TARGET = "&aYou were given a lightning stick";
-    public static String LS_PLAYER_EVERYONE = "&aYou have given &eeveryone &aa lightning stick";
-    public static String LS_REMOVED = "&aYour lightningstick has been removed by &e%remover%";
-    public static String LS_REMOVED_EVERYONE = "&%remover% has removed everyones lightning sticks!";
+    // General
+    public static Message INVALID_PLAYER = new Message(config.getString("INVALID_PLAYER"));
+    public static Message USE_NUMBER = new Message(config.getString("USE_NUMBER"));
+
+    // Give
+    public static Message GIVE_ARGUMENTS = new Message(config.getString("GIVE_ARGUMENTS"));
+    public static Message GIVE_SENDER = new Message(config.getString("GIVE_SENDER"));
+    public static Message GIVE_RECEIVER = new Message(config.getString("GIVE_RECEIVER"));
+
+    // GiveAll
+    public static Message GIVEALL_ARGUMENTS = new Message(config.getString("GIVEALL_ARGUMENTS"));
+    public static Message GIVEALL_SENDER = new Message(config.getString("GIVEALL_SENDER"));
+    public static Message GIVEALL_RECEIVER = new Message(config.getString("GIVEALL_RECEIVER"));
+
+    // Reload
+    public static Message RELOADED = new Message(config.getString("RELOADED"));
 }
