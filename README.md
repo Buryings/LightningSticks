@@ -3,7 +3,7 @@
 **Lightningsticks** is a plugin inspired from Hypixel's Lightning Sticks plugin, where you are able to give out lightning sticks to all online players in a lobby.
 The concept of this plugin is to give a lightning stick to a target player or all players online.
 
-Thanks to hypewsthedev and his help with the creation of this plugin.
+Thanks to hypewsthedev and NegativeKB's help with the creation of this plugin.
 
 **Permissions**
 > lightningsticks.use - Needed to use command /lsgive (Gives lightning sticks to player's inventories)
